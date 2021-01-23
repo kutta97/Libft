@@ -6,9 +6,11 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 02:38:42 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/24 02:44:42 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/24 02:54:44 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
