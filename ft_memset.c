@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 00:45:53 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/24 06:04:26 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/24 08:03:54 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*p;
 
-	p = (unsigned char *)b;
+	p = b;
 	while (len--)
 		*p++ = c;
 	return (b);
