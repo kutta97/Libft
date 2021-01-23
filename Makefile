@@ -6,7 +6,7 @@
 #    By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/24 03:01:36 by hyyang            #+#    #+#              #
-#    Updated: 2021/01/24 03:10:11 by hyyang           ###   ########.fr        #
+#    Updated: 2021/01/24 04:47:51 by hyyang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ CFLAGS	= -Wall -Wextra -Werror
 
 NAME	= libft.a
 
-%o: %c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $<
 
 all: $(NAME)
@@ -33,7 +33,9 @@ $(NAME) : $(OBJS)
 clean :
 	$(RM) $(OBJS)
 
-fclean :
+fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
+
+.PHONY: all clean fclean re
