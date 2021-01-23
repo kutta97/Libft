@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 01:56:10 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/24 02:32:25 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/24 03:25:44 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	if (dst == src || len == 0)
 		return (dst);
-	d = (dst < src) ? dst : dst + len;
-	s = (dst < src) ? src : src + len;
+	d = (unsigned char *)dst + ((dst < src) ? 0 : len);
+	s = (unsigned char *)src + ((dst < src) ? 0 : len);
 	if (dst < src)
 	{
 		while (len--)

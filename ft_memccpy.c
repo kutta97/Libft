@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 01:46:34 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/24 02:20:48 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/24 03:22:07 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*s;
-	int				i;
+	size_t			i;
 
-	s = src;
+	s = (unsigned char *)src;
 	i = 0;
 	while (i < n && s[i] != c)
 		ft_memset(dst, s[i++], 1);
