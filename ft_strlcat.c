@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 08:06:48 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/24 08:21:02 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/24 18:34:51 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[dst_len + i] = '\0';
-	return (dst_len +  src_len);
+	return (dst_len + src_len);
 }
