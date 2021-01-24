@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 00:28:24 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/24 17:49:02 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/24 18:13:00 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int 	ft_atoi(const char *str);
+int		ft_isalpha(int c);
 
 #endif
