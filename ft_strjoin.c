@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 20:02:22 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/24 20:12:04 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/24 20:52:13 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = ft_calloc(s1_len + s2_len + 1, sizeof(char));
 	if (str == 0)
 		return (0);
-	ft_strlcpy(str, s1, s1_len);
+	ft_memcpy(str, s1, s1_len);
 	ft_strlcat(str, s2, s2_len);
 	return (str);
 }
