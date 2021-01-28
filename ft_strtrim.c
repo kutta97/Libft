@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 20:13:32 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/24 21:47:28 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/29 00:31:14 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (ft_strchr(set, s1[start + end - 1]))
 			end--;
 	}
-	str = calloc(end - start + 1, sizeof(char));
-	if (str == 0)
+	if (!(str = (char *)malloc((end - start + 1) * sizeof(char))))
 		return (0);
 	ft_strlcpy(str, s1 + start, end - start + 1);
 	return (str);
