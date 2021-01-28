@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 23:33:39 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/28 22:41:25 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/29 00:25:05 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char		**ft_split(char const *s, char c)
 			strs[i] = 0;
 		while (s[j] == c)
 			j++;
-		ft_strlcpy(strs[i], s[j], wordlen);
+		ft_strlcpy(strs[i], &s[j], wordlen);
 		i++;
 	}
 	*strs = 0;
