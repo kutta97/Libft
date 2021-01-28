@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 20:13:32 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/29 00:31:14 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/29 01:51:25 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*str;
 
+	if (!s1)
+		return (0);
+	if (!set)
+		return (ft_strdup(s1));
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
