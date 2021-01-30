@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 01:54:34 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/29 03:23:10 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/30 16:52:51 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char		*ft_itoa(int n)
 	len = ft_strnumlen(n);
 	if (!(result = (char *)malloc((len + 1) * sizeof(char))))
 		return (0);
+	if (n == 0)
+		result[0] = '0';
 	if (n < 0)
 		result[0] = '-';
 	result[len--] = '\0';
