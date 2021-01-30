@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 01:46:34 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/29 16:35:45 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/30 15:48:37 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (0);
 }
- 
