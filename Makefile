@@ -6,7 +6,7 @@
 #    By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/24 03:01:36 by hyyang            #+#    #+#              #
-#    Updated: 2021/01/24 18:40:59 by hyyang           ###   ########.fr        #
+#    Updated: 2021/01/31 01:35:59 by hyyang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,12 @@ SRCS	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			ft_split.c ft_itoa.c ft_strmapi.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 
+SRCS_B	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+			ft_lstmap.c 
+
 OBJS	= $(SRCS:%.c=%.o)
+OBJS_B	= $(SRCS_B:%.c=%.o)
 
 AR		= ar -crs
 CC		= gcc
@@ -35,15 +40,18 @@ NAME	= libft.a
 
 all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME): $(OBJS)
 	$(AR) $@ $^
 
-clean :
+bonus: $(OBJS_B)
+	$(AR) $(NAME) $^
+
+clean:
 	$(RM) $(OBJS)
 
-fclean : clean
+fclean: clean
 	$(RM) $(NAME)
 
-re : fclean all
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
