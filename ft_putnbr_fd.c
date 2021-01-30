@@ -6,15 +6,15 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 04:06:43 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/31 00:59:00 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/31 01:04:39 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putdigit(unsigned int n, int fd)
+void	ft_putdigit(unsigned int n, int fd)
 {
-	char c;
+	char	c;
 
 	c = (n % 10) + '0';
 	if (n >= 10)
