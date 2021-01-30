@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 04:06:43 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/31 01:04:39 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/31 01:05:24 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n < 0)
 		ft_putchar_fd('-', fd);
 	(n < 0) ? ft_putdigit(-n, fd) : ft_putdigit(n, fd);
-	
 	write(fd, nbr, ft_strlen(nbr));
 }
