@@ -6,7 +6,7 @@
 #    By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/24 03:01:36 by hyyang            #+#    #+#              #
-#    Updated: 2021/01/31 01:35:59 by hyyang           ###   ########.fr        #
+#    Updated: 2021/01/31 22:57:12 by hyyang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ bonus: $(OBJS_B)
 	$(AR) $(NAME) $^
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
 	$(RM) $(NAME)
