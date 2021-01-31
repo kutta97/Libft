@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 01:43:20 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/31 01:43:59 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/31 20:06:04 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	
+	t_list *lst;
+
+	if(!(lst = (t_list *)malloc(sizeof(t_list))))
+		return (0);
+	lst->content = content;
+	lst->next = 0;
+	return (lst);
 }
