@@ -6,13 +6,13 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 01:54:34 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/30 16:52:51 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/31 14:45:07 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_strnumlen(int n)
+static int			ft_strnumlen(int n)
 {
 	int len;
 
@@ -22,12 +22,12 @@ static int	ft_strnumlen(int n)
 	return (len);
 }
 
-static int	ft_abs(int n)
+static unsigned int	ft_abs(int n)
 {
 	return ((n < 0) ? -n : n);
 }
 
-char		*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	int		len;
 	char	*result;
@@ -42,7 +42,7 @@ char		*ft_itoa(int n)
 	result[len--] = '\0';
 	while (n != 0)
 	{
-		result[len--] = ft_abs(n % 10) + '0';
+		result[len--] = (ft_abs(n) % 10) + '0';
 		n /= 10;
 	}
 	if (len > 0)
