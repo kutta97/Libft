@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 23:33:39 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/30 16:44:15 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/31 13:45:09 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,23 @@ static size_t	ft_wordlen(char const *s, size_t *j, char c)
 	return (len);
 }
 
+static char		**ft_malloc_error(char **words)
+{
+	int	i;
+
+	i = 0;
+	while (words[i])
+	{
+		free(words[i]);
+		i++;
+	}
+	free(words);
+	return (0);
+}
+
 char			**ft_split(char const *s, char c)
 {
-	char		**strs;
+	char		**words;
 	size_t		count;
 	size_t		wordlen;
 	size_t		i;
@@ -54,19 +68,19 @@ char			**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	count = (ft_count_words(s, c));
-	if (!(strs = (char **)malloc((count + 1) * sizeof(char *))))
+	if (!(words = (char **)malloc((count + 1) * sizeof(char *))))
 		return (0);
 	i = 0;
 	j = 0;
 	while (i < count)
 	{
 		wordlen = ft_wordlen(s, &j, c);
-		if (!(strs[i] = (char *)malloc((wordlen + 1) * sizeof(char))))
-			strs[i] = 0;
-		ft_strlcpy(strs[i], &s[j], wordlen + 1);
+		if (!(words[i] = (char *)malloc((wordlen + 1) * sizeof(char))))
+			return (ft_malloc_error(words));
+		ft_strlcpy(words[i], &s[j], wordlen + 1);
 		j += wordlen;
 		i++;
 	}
-	strs[i] = 0;
-	return (strs);
+	words[i] = 0;
+	return (words);
 }
