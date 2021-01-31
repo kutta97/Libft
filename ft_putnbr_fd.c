@@ -6,13 +6,13 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 04:06:43 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/31 01:05:24 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/01/31 13:13:42 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putdigit(unsigned int n, int fd)
+static void	ft_putdigit(unsigned int n, int fd)
 {
 	char	c;
 
@@ -22,7 +22,7 @@ void	ft_putdigit(unsigned int n, int fd)
 	ft_putchar_fd(c, fd);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void		ft_putnbr_fd(int n, int fd)
 {
 	char	*nbr;
 
