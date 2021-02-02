@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 17:59:16 by hyyang            #+#    #+#             */
-/*   Updated: 2021/02/02 21:10:52 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/02/03 00:03:56 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*result;
 	t_list	*new;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (0);
 	result = 0;
 	while (lst)
