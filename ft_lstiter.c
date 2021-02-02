@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 17:56:50 by hyyang            #+#    #+#             */
-/*   Updated: 2021/02/02 17:58:30 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/02/02 21:10:01 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	while (lst)
 	{
 		f(lst->content);
-		lst = lst-> next;
+		lst = lst->next;
 	}
 }
