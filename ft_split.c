@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 23:33:39 by hyyang            #+#    #+#             */
-/*   Updated: 2021/01/31 13:45:09 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/02/03 22:02:32 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,11 @@ static char		**ft_malloc_error(char **words)
 	while (words[i])
 	{
 		free(words[i]);
+		words[i] = 0;
 		i++;
 	}
 	free(words);
+	words = 0;
 	return (0);
 }
 
@@ -67,7 +69,7 @@ char			**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	count = (ft_count_words(s, c));
+	count = ft_count_words(s, c);
 	if (!(words = (char **)malloc((count + 1) * sizeof(char *))))
 		return (0);
 	i = 0;
