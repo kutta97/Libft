@@ -6,7 +6,7 @@
 /*   By: hyyang <hyyang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 23:33:39 by hyyang            #+#    #+#             */
-/*   Updated: 2021/02/03 22:02:32 by hyyang           ###   ########.fr       */
+/*   Updated: 2021/02/03 22:04:03 by hyyang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,9 @@ static char		**ft_malloc_error(char **words)
 	while (words[i])
 	{
 		free(words[i]);
-		words[i] = 0;
 		i++;
 	}
 	free(words);
-	words = 0;
 	return (0);
 }
 
